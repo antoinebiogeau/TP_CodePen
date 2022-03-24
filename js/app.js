@@ -22,7 +22,11 @@ let app =({
     },
     keyPress (e) {
         console.log(e);
-        e.keyCode == 37 ? app.slidePrecedente() : e.keyCode == 39 ? app.slideSuivante() : null;
+        if(e.keyCode === 37){
+            app.slidePrecedente();
+        } else if(e.keyCode === 39){
+            app.slideSuivante();
+        }
     },
 })
 
